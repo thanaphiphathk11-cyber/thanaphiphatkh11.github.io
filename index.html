@@ -27,6 +27,31 @@ body {
 .menu {
   color: white;
   font-size: 24px;
+  cursor: pointer;
+}
+
+/* DROPDOWN MENU */
+.dropdown {
+  max-height: 0;
+  overflow: hidden;
+  background: #333;
+  transition: max-height 0.3s ease;
+}
+
+.dropdown.show {
+  max-height: 200px;
+}
+
+.dropdown a {
+  display: block;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  border-top: 1px solid #444;
+}
+
+.dropdown a:hover {
+  background: #444;
 }
 
 /* TABLE */
@@ -46,7 +71,7 @@ th, td {
 }
 
 .f {
-  color: black;
+  color: red;
 }
 
 /* FOOTER */
@@ -69,7 +94,14 @@ th, td {
 <!-- HEADER -->
 <div class="header">
   <img src="appicon-mini.png" class="appicon-mini">
-  <div class="menu">☰</div>
+  <div class="menu" onclick="toggleMenu()">☰</div>
+</div>
+
+<!-- DROPDOWN -->
+<div id="dropdown" class="dropdown">
+  <a href="#">หน้าแรก</a>
+  <a href="#">ผลการเรียน</a>
+  <a href="#">ออกจากระบบ</a>
 </div>
 
 <!-- TABLE -->
@@ -87,7 +119,6 @@ th, td {
 <tr><td>LAW2106</td><td>1</td><td class="f">F</td></tr>
 <tr><td>LAW1106</td><td>1</td><td class="f">F</td></tr>
 <tr><td>LAW1101</td><td>1</td><td class="f">F</td></tr>
-
 </table>
 
 <!-- FOOTER -->
@@ -96,7 +127,14 @@ th, td {
   พัฒนาระบบโดย ฝ่ายพัฒนาและบริการสื่อเทคโนโลยีสารสนเทศ<br>
   สถาบันคอมพิวเตอร์ มหาวิทยาลัยรามคำแหง<br>
   หากมีปัญหา ติดต่อ 02-310-8845
-</div>
+</div>ฟ
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("dropdown");
+  menu.classList.toggle("show");
+}
+</script>
 
 </body>
 </html>
