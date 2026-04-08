@@ -9,79 +9,52 @@
 body {
   font-family: Arial;
   margin: 0;
-  background: url('bg.jpg') no-repeat center center fixed;
-  background-size: cover;
 }
 
-/* header */
+/* HEADER */
 .header {
-  background: #1e1e1e;
-  height: 60px;
-  padding: 0 15px;
+  background: #222;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  width: 35px;
+  height: 40px;
 }
 
 .menu {
   color: white;
-  font-size: 26px;
+  font-size: 24px;
 }
 
-/* กล่อง */
-.container {
-  max-width: 500px;
-  margin: 20px auto;
-  background: rgba(255,255,255,0.95);
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-
-/* ปี */
-.year {
-  font-size: 60px;
-  font-weight: bold;
-  padding: 20px;
-  background: #eee;
-}
-
-/* table */
+/* TABLE */
 table {
   width: 100%;
   border-collapse: collapse;
 }
 
-th {
-  background: #ddd;
-}
-
 th, td {
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   text-align: center;
 }
 
-/* สีเกรด */
-.f {
-  color: red;
-  font-weight: bold;
+.year {
+  font-size: 40px;
 }
 
-/* footer */
+.f {
+  color: red;
+}
+
+/* FOOTER */
 .footer {
-  margin-top: 20px;
+  background: #222;
+  color: white;
   padding: 15px;
   font-size: 14px;
-  color: #333;
-  background: rgba(255,255,255,0.9);
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
 }
 
 .footer img {
@@ -93,40 +66,36 @@ th, td {
 
 <body>
 
-<!-- header -->
+<!-- HEADER -->
 <div class="header">
   <img src="appicon-mini.png" class="appicon-mini">
   <div class="menu">☰</div>
 </div>
 
-<!-- content -->
-<div class="container">
-  <div class="year">2568</div>
+<!-- TABLE -->
+<table>
+<tr><th colspan="3" class="year">2568</th></tr>
+<tr>
+  <th>วิชา</th>
+  <th>ภาคเรียน</th>
+  <th>เกรด</th>
+</tr>
 
-  <table>
-    <tr>
-      <th>วิชา</th>
-      <th>ภาคเรียน</th>
-      <th>เกรด</th>
-    </tr>
+<tr><td>RAM1141</td><td>1</td><td class="f">F*</td></tr>
+<tr><td>RAM1111</td><td>1</td><td class="f">C*</td></tr>
+<tr><td>RAM1103</td><td>1</td><td class="f">C*</td></tr>
+<tr><td>LAW2106</td><td>1</td><td class="f">F</td></tr>
+<tr><td>LAW1106</td><td>1</td><td class="f">F</td></tr>
+<tr><td>LAW1101</td><td>1</td><td class="f">F</td></tr>
 
-    <tr><td>RAM1141</td><td>1</td><td class="C">F*</td></tr>
-    <tr><td>RAM1111</td><td>1</td><td class="C">C*</td></tr>
-    <tr><td>RAM1103</td><td>1</td><td class="f">C*</td></tr>
-    <tr><td>LAW2106</td><td>1</td><td class="f">F</td></tr>
-    <tr><td>LAW1106</td><td>1</td><td class="f">F</td></tr>
-    <tr><td>LAW1101</td><td>1</td><td class="f">F</td></tr>
-  </table>
-</div>
+</table>
 
-<!-- footer -->
+<!-- FOOTER -->
 <div class="footer">
-  <img src="logo.png">
-  <div>
-    พัฒนาระบบโดย ฝ่ายพัฒนาและบริการสื่อเทคโนโลยีสารสนเทศ<br>
-    สถาบันคอมพิวเตอร์ มหาวิทยาลัยรามคำแหง<br>
-    หากมีปัญหาในการเข้าใช้งานระบบ e-Service ติดต่อ 02-310-8845
-  </div>
+  <img src="appicon-mini.png"><br><br>
+  พัฒนาระบบโดย ฝ่ายพัฒนาและบริการสื่อเทคโนโลยีสารสนเทศ<br>
+  สถาบันคอมพิวเตอร์ มหาวิทยาลัยรามคำแหง<br>
+  หากมีปัญหา ติดต่อ 02-310-8845
 </div>
 
 </body>
